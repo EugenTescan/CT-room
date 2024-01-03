@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed Tomography Room</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/header-footer.css">
+    <link rel="icon" type="image/png" href="/images/CT-icon-mini.jpg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+    <header class="container">
+        <div class="nav-bar">
+            <div id="menu-icon">☰</div>
+            <div class="menu-logo">
+                <a href="#"><img src="./images/logo.jpg" alt=""></a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#what-is">What is</a></li>
+                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#risks">Risks</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-image-ct" id="home">
+        <img src="./images/main-computer-tomograf-desktop.jpg" usemap="#image-map" class="maparea">
+        <map name="image-map" id="image-map">
+            <area class="exam-table" alt="ct-bed" title="Examination Table" href="javascript:void(0);"  onclick="showPopup('exam-table-popup', event);" coords="1467,934,1349,922,1304,945,1279,984,752,1124,505,1083,440,1146,456,1192,275,1255,250,1291,273,1352,297,1404,383,1465,465,1497,573,1474,1062,1255,1134,1271,955,1379,949,1422,958,1445,1105,1513,1161,1524,1209,1492,1478,1250,1480,1196,1462,1151,1415,1117" shape="poly">
+            <area alt="ct-magnet" title="Gantry" href="javascript:void(0);" onclick="showPopup('gantry-popup', event);" coords="1686,610,1437,610,1329,647,1249,730,1216,818,1220,941,1238,990,1317,1108,1462,1192,1833,1253,1860,1248,1876,1173,1889,1103,1899,837,1883,671,1865,622" shape="poly">
+            <area alt="ct-ac" title="Ventilation" href="javascript:void(0);" onclick="showPopup('vents-popup', event);" coords="2249,228,2240,199,2161,183,2136,138,2168,2,2412,5,2287,226" shape="poly">
+            <area  alt="control-room" title="Control Room" href="javascript:void(0);" onclick="showPopup('control-popup', event);" coords="2557,146,2295,419,2284,1041,2553,1217" shape="poly">
+            <area alt="ct-walls" title="Lead-lined Walls" href="javascript:void(0);" onclick="showPopup('walls-popup', event);" coords="64,7,1349,558,2086,450,2195,199,2235,203,2245,226,2283,231,2414,7,2552,0,2559,129,2290,432,2285,1047,2559,1230,2557,1698,2394,1705,2088,1085,1892,1063,1901,825,1887,671,1867,617,1688,604,1525,604,1430,613,1325,649,1250,728,1214,821,1218,919,1231,993,756,1121,508,1082,439,1148,453,1194,295,1244,259,1281,266,1350,4,1432,0,4" shape="poly">
+            <area alt="ct-ceiling" title="Lighting" href="javascript:void(0);" onclick="showPopup('lights-popup', event);" coords="58,0,1351,557,2083,446,2194,194,2158,176,2137,155,2169,4" shape="poly">
+            <area alt="ct-floor" title="Vinyl Flooring" href="javascript:void(0);" onclick="showPopup('floor-popup', event);" coords="0,1436,263,1358,283,1395,365,1461,457,1498,558,1481,1070,1246,1132,1271,948,1379,945,1440,1091,1514,1153,1526,1200,1501,1477,1256,1481,1198,1838,1256,1863,1256,1883,1169,1891,1071,2084,1083,2388,1699,4,1703" shape="poly">
+        </map>
+    </div>
+    <div id="what-is"></div>
+    <div id="how-it-works"></div>
+    <div id="risks"></div>
+    <div id="faq"></div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <footer>
+        <hr>
+        <div class="copyright">
+            <p>&#169; CT-Room | All Rights Reserved, 2023</p>
+            <p>Made with <img src="./images/heart.png" alt=""> by <a href="https://eugentescan.eu/">Tescan Eugen</a></p>
+        </div>
+    </footer>
+    <script src="javascript/room.js"></script>
+    <script src="javascript/map-image-responsive.js"></script>
+    <script>imageMapResize();</script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="javascript/jquery.maphilight.js"></script>
+    <script>
+        $(function() {
+            $('.maparea').maphilight();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#menu-icon {
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 50px;
+}
+
+.menu-logo {
+    margin-left: 20px;
+    position: relative;
+    top: -20px;
+    height: 60px;
+}
+
+.menu-logo:hover {    
+    transform: scale(1.2);
+    transition: transform 0.5s linear;
+}
+
+.menu-logo img{
+    height: 90px;
+}
+
+.nav-menu {
+    width: 50%;
+    align-self: center;
+}
+
+.nav-menu ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li {
+    margin: 0;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.5s ease;
+}
+
+.nav-menu ul li a:hover{
+    color: orangered;    
+}
+
+.footer {
+    background-color: lightgrey;
+}
+
+.copyright {
+    text-align: center;
+    padding: 50px 50px;
+}
+
+.copyright img {    
+    width: 14px;
+}
+
+@media (max-width: 1024px) {
+    .nav-menu {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        align-items: center;
+        width: fit-content;
+        text-align: center;
+    }
+    
+    .menu-logo {
+        margin: 10px 0;
+    }
+
+    .menu-logo {
+        margin-left: 20px;
+        position: fixed;
+        right: 20px;
+        top: 0;
+    }
+    
+    .menu-logo:hover {    
+        transform: scale(1.2);
+        transition: transform 0.5s linear;
+    }
+    
+    .menu-logo img {
+        height: 60px;
+    }
+    
+    .nav-menu {
+        top: 100%;
+        background-color: white;
+        margin-top: 200px;
+        display: none;
+        position: relative;
+        padding: 20px;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    .nav-menu ul li {
+        margin: 10px 0;
+    }
+    
+    #menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 360px) {
+   
+}

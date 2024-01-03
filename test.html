@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Area Click</title>
+    <style>
+    /* Popup container - can be anything you want */
+    .popup-text {
+      position: relative;
+      cursor: pointer;
+    }
+    
+    /* The actual popup */
+    .popup-text .popuptext {
+      visibility: hidden;
+      width: 600px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 10;
+      bottom: -500%;
+    }
+    
+    /* Toggle this class - hide and show the popup */
+    .popup-text .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+    
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;} 
+      to {opacity: 1;}
+    }
+    
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+    }
+    </style>
+</head>
+<body>
+
+<!-- The image map -->
+<img src="/images/Mediso1-1200x675.jpg" usemap="#map" alt="Map Image">
+<map name="map">
+    <!-- The area with the polygon shape -->
+    <area shape="poly" coords="78,519,64,389,75,303,130,210,179,178,271,152,317,146,357,154,398,174,414,159,432,155,465,154,503,164,535,177,583,206,600,229,595,270,625,245,621,214,670,207,692,274,636,273,627,263,575,308,545,322,548,386,580,391,981,427,997,402,1022,409,1026,426,1065,434,1078,418,1092,409,1106,421,1110,439,1121,441,1130,463,1118,486,1076,505,908,492,904,552,935,557,947,566,955,592,923,616,877,617,531,556,531,529,545,515,517,513,414,535,416,551,383,558,349,558,354,594,375,614,367,622,337,622,309,612,304,578,293,584,293,600,276,604,268,600,260,571,262,547,269,539,253,538,225,546" shape="poly" onclick="myFunction()">
+</map>
+
+<div class="popup-text">
+    <div class="popuptext" id="myPopup">
+        <h2>Examination Table</h2>
+        <p >The examination table is where the patient lies during the scanning process. It is designed to slide in and out of the gantry, allowing the patient's body to be positioned correctly for imaging.</p>
+    </div>
+</div>
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// JavaScript function to show the hidden div
+function showDiv() {
+    popup = document.getElementsByClassName("hidden-div");
+    popup.classList.toggle("show");
+}
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
